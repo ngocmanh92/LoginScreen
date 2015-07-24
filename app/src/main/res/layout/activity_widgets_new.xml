@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#66000000"
+        />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+    <RatingBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="20"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+    <ProgressBar
+        android:max="100"
+        android:progress="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+        <RadioButton
+            android:id="@+id/answer_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer 1"
+            />
+        <!--</LinearLayout>-->
+         <RadioButton
+            android:id="@+id/answer_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer 2"
+            />
+         <RadioButton
+            android:id="@+id/answer_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer 3"
+            />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox_1"
+            android:text="Check Answer 1"
+            />
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox_2"
+            android:text="Check Answer 2"
+            />
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox_3"
+            android:text="Check Answer 4"
+            />
+    </LinearLayout>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Tat"
+        android:textOn="Mo"
+        />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Tat"
+        android:textOn="Mo"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        />
+
+
+</LinearLayout>

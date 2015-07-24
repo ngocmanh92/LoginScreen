@@ -93,7 +93,6 @@
         android:layout_below="@+id/layout_forgotpass"
         android:background="@drawable/login_button"
         android:text="Login"
-        android:gravity="left"
         android:textColor="@android:color/white" />
 
 

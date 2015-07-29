@@ -39,11 +39,6 @@
         <activity
             android:name=".WidgetsActivity"
             android:label="@string/title_activity_scroll_view" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".WebviewActivity"
@@ -52,6 +47,19 @@
         <activity
             android:name=".FrameLayoutActivity"
             android:label="@string/title_activity_frame_layout" >
+        </activity>
+        <activity
+            android:name=".SimpleListViewActivity"
+            android:label="@string/title_activity_simple_list_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SlowlyActivity"
+            android:label="@string/title_activity_slowly" >
         </activity>
     </application>
 

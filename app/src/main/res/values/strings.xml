@@ -7,4 +7,6 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_scroll_view">ScrollView</string>
     <string name="title_activity_frame_layout">FrameLayoutActivity</string>
+    <string name="title_activity_simple_list_view">SimpleListViewActivity</string>
+    <string name="title_activity_slowly">SlowlyActivity</string>
 </resources>

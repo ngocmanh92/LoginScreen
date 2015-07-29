@@ -9,4 +9,6 @@
     <string name="title_activity_frame_layout">FrameLayoutActivity</string>
     <string name="title_activity_simple_list_view">SimpleListViewActivity</string>
     <string name="title_activity_slowly">SlowlyActivity</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
+    <string name="title_activity_events">EventsActivity</string>
 </resources>

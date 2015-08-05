@@ -60,7 +60,6 @@
         <activity
             android:name=".GridViewActivity"
             android:label="@string/title_activity_grid_view" >
-
         </activity>
         <activity
             android:name=".EventsActivity"
@@ -69,15 +68,20 @@
         <activity
             android:name=".FirstActivity"
             android:label="@string/title_activity_first" >
+
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_second" >
+        </activity>
+        <activity
+            android:name=".FragmentDemoActivity"
+            android:label="@string/title_activity_fragment_demo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".SecondActivity"
-            android:label="@string/title_activity_second" >
         </activity>
     </application>
 

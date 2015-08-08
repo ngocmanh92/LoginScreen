@@ -81,11 +81,20 @@
         <activity
             android:name=".DatabaseActivity"
             android:label="@string/title_activity_database" >
-
         </activity>
         <activity
             android:name=".ContactsActivity"
             android:label="@string/title_activity_contacts" >
+
+        </activity>
+        <activity
+            android:name=".SharedPreferenceActivity"
+            android:label="@string/title_activity_shared_preference" >
+
+        </activity>
+        <activity
+            android:name=".SdcardActivity"
+            android:label="SdcardActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

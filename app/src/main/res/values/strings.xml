@@ -20,4 +20,5 @@
     <string name="title_activity_cp">CPActivity</string>
     <string name="title_activity_database">DatabaseActivity</string>
     <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="title_activity_shared_preference">SharedPreferenceActivity</string>
 </resources>

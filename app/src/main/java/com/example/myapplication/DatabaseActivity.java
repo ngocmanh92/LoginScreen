@@ -155,6 +155,7 @@ public class DatabaseActivity extends ActionBarActivity implements View.OnClickL
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+        listView.setOnItemLongClickListener(this);
     }
 
 

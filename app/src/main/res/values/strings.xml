@@ -21,4 +21,6 @@
     <string name="title_activity_database">DatabaseActivity</string>
     <string name="title_activity_contacts">ContactsActivity</string>
     <string name="title_activity_shared_preference">SharedPreferenceActivity</string>
+    <string name="title_activity_async_task">AsyncTaskActivity</string>
+    <string name="title_activity_handler">HandlerActivity</string>
 </resources>

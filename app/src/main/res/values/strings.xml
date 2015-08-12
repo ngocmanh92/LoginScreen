@@ -23,4 +23,6 @@
     <string name="title_activity_shared_preference">SharedPreferenceActivity</string>
     <string name="title_activity_async_task">AsyncTaskActivity</string>
     <string name="title_activity_handler">HandlerActivity</string>
+    <string name="title_activity_filterable_list">FilterableListActivity</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
 </resources>

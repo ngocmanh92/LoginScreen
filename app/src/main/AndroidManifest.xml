@@ -97,11 +97,23 @@
         <activity
             android:name=".AsyncTaskActivity"
             android:label="@string/title_activity_async_task" >
-
         </activity>
         <activity
             android:name=".HandlerActivity"
             android:label="@string/title_activity_handler" >
+        </activity>
+        <activity
+            android:name=".FilterableListActivity"
+            android:label="@string/title_activity_filterable_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewPagerActivity"
+            android:label="@string/title_activity_view_pager" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -97,6 +97,11 @@
         <activity
             android:name=".ServiceActivity"
             android:label="@string/title_activity_service">
+        </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:name=".MenuActivity"
+            android:label="Menu Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

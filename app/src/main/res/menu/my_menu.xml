@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_my_action"
+        android:title="My action"
+        app:actionProviderClass="com.example.myapplication.MyShareAction"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_my_action_view"
+        android:title="My action view"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="My action view"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="Detele"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_save"
+        android:title="Save"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="ifRoom" />
+
+</menu>

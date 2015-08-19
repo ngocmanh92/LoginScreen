@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.myapplication" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
 
     <application
         android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".SignUpActivity"
-            android:label="@string/title_activity_sign_up">
+            android:label="@string/title_activity_sign_up" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -29,7 +28,7 @@
         </activity>
         <activity
             android:name=".ScrollView"
-            android:label="@string/title_activity_scroll_view">
+            android:label="@string/title_activity_scroll_view" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -40,93 +39,93 @@
         </activity>
         <activity
             android:name=".WidgetsActivity"
-            android:label="@string/title_activity_scroll_view"></activity>
+            android:label="@string/title_activity_scroll_view" />
         <activity
             android:name=".WebviewActivity"
-            android:label="@string/title_activity_scroll_view"></activity>
+            android:label="@string/title_activity_scroll_view" />
         <activity
             android:name=".FrameLayoutActivity"
-            android:label="@string/title_activity_frame_layout"></activity>
+            android:label="@string/title_activity_frame_layout" />
         <activity
             android:name=".SimpleListViewActivity"
-            android:label="@string/title_activity_simple_list_view"></activity>
+            android:label="@string/title_activity_simple_list_view" />
         <activity
             android:name=".SlowlyActivity"
-            android:label="@string/title_activity_slowly"></activity>
+            android:label="@string/title_activity_slowly" />
         <activity
             android:name=".GridViewActivity"
-            android:label="@string/title_activity_grid_view"></activity>
+            android:label="@string/title_activity_grid_view" />
         <activity
             android:name=".EventsActivity"
-            android:label="@string/title_activity_events"></activity>
+            android:label="@string/title_activity_events" />
         <activity
             android:name=".FirstActivity"
-            android:label="@string/title_activity_first"></activity>
+            android:label="@string/title_activity_first" />
         <activity
             android:name=".SecondActivity"
-            android:label="@string/title_activity_second"></activity>
+            android:label="@string/title_activity_second" />
         <activity
             android:name=".FragmentDemoActivity"
-            android:label="@string/title_activity_fragment_demo"></activity>
+            android:label="@string/title_activity_fragment_demo" />
         <activity
             android:name=".DatabaseActivity"
-            android:label="@string/title_activity_database"></activity>
+            android:label="@string/title_activity_database" />
         <activity
             android:name=".ContactsActivity"
-            android:label="@string/title_activity_contacts"></activity>
+            android:label="@string/title_activity_contacts" />
         <activity
             android:name=".SharedPreferenceActivity"
-            android:label="@string/title_activity_shared_preference"></activity>
+            android:label="@string/title_activity_shared_preference" />
         <activity
             android:name=".SdcardActivity"
-            android:label="SdcardActivity"></activity>
+            android:label="SdcardActivity" />
         <activity
             android:name=".AsyncTaskActivity"
-            android:label="@string/title_activity_async_task"></activity>
+            android:label="@string/title_activity_async_task" />
         <activity
             android:name=".HandlerActivity"
-            android:label="@string/title_activity_handler"></activity>
+            android:label="@string/title_activity_handler" />
         <activity
             android:name=".FilterableListActivity"
-            android:label="@string/title_activity_filterable_list">
-
+            android:label="@string/title_activity_filterable_list" >
         </activity>
         <activity
             android:name=".ViewPagerActivity"
-            android:label="@string/title_activity_view_pager"></activity>
+            android:label="@string/title_activity_view_pager" />
         <activity
             android:name=".ServiceActivity"
-            android:label="@string/title_activity_service">
+            android:label="@string/title_activity_service" >
         </activity>
         <activity
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:name=".MenuActivity"
-            android:label="Menu Activity">
+            android:label="Menu Activity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        </activity>
+
+        <!-- define service -->
+        <service android:name=".services.MyFirstService" />
+
+        <!-- define receiver -->
+        <receiver android:name=".services.MyActionReceiver" >
+            <intent-filter>
+                <action android:name="com.example.myaction" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MaterialTabsActivity"
+            android:label="@string/title_activity_material_tabs" >
+
+        </activity>
+        <activity
+            android:name=".MaterialDesignActivity"
+            android:label="@string/title_activity_material_design" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!--define service-->
-        <service android:name="com.example.myapplication.services.MyFirstService" />
-
-        <!--define receiver-->
-        <receiver android:name=".services.MyActionReceiver">
-            <intent-filter>
-                <action android:name="com.example.myaction"/>
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>
-
-
-
-
-
-
-
-
-

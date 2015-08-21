@@ -28,4 +28,6 @@
     <string name="title_activity_service">ServiceActivity</string>
     <string name="title_activity_material_tabs">MaterialTabsActivity</string>
     <string name="title_activity_material_design">MaterialDesignActivity</string>
+    <string name="title_activity_style">StyleActivity</string>
+    <string name="title_activity_configuration">ConfigurationActivity</string>
 </resources>

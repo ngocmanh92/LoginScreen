@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication" >
+    package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,13 +11,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
         <activity
             android:name=".SignUpActivity"
-            android:label="@string/title_activity_sign_up" >
+            android:label="@string/title_activity_sign_up">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -28,7 +28,7 @@
         </activity>
         <activity
             android:name=".ScrollView"
-            android:label="@string/title_activity_scroll_view" >
+            android:label="@string/title_activity_scroll_view">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -87,26 +87,23 @@
             android:label="@string/title_activity_handler" />
         <activity
             android:name=".FilterableListActivity"
-            android:label="@string/title_activity_filterable_list" >
-        </activity>
+            android:label="@string/title_activity_filterable_list"></activity>
         <activity
             android:name=".ViewPagerActivity"
             android:label="@string/title_activity_view_pager" />
         <activity
             android:name=".ServiceActivity"
-            android:label="@string/title_activity_service" >
-        </activity>
+            android:label="@string/title_activity_service"></activity>
         <activity
             android:name=".MenuActivity"
             android:label="Menu Activity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
 
         <!-- define service -->
         <service android:name=".services.MyFirstService" />
 
         <!-- define receiver -->
-        <receiver android:name=".services.MyActionReceiver" >
+        <receiver android:name=".services.MyActionReceiver">
             <intent-filter>
                 <action android:name="com.example.myaction" />
             </intent-filter>
@@ -114,12 +111,20 @@
 
         <activity
             android:name=".MaterialTabsActivity"
-            android:label="@string/title_activity_material_tabs" >
+            android:label="@string/title_activity_material_tabs"></activity>
+        <activity
+            android:name=".MaterialDesignActivity"
+            android:label="@string/title_activity_material_design"></activity>
+        <activity
+            android:name=".StyleActivity"
+            android:label="@string/title_activity_style"
+            android:theme="@style/StyledTheme">
 
         </activity>
         <activity
-            android:name=".MaterialDesignActivity"
-            android:label="@string/title_activity_material_design" >
+            android:name=".ConfigurationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_configuration">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

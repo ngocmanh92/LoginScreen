@@ -31,4 +31,6 @@
     <string name="title_activity_style">StyleActivity</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
     <string name="title_activity_customized_view">CustomizedViewActivity</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="title_activity_notify_result">NotifyResultActivity</string>
 </resources>

@@ -124,16 +124,23 @@
             android:name=".ConfigurationActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_configuration" >
-
         </activity>
         <activity
             android:name=".CustomizedViewActivity"
             android:label="@string/title_activity_customized_view" >
+        </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotifyResultActivity"
+            android:label="@string/title_activity_notify_result" >
         </activity>
     </application>
 

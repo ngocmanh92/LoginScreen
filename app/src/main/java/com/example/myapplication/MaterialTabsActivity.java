@@ -114,7 +114,7 @@ public class MaterialTabsActivity extends AppCompatActivity {
 
     }
 
-    private static class PageFragment extends Fragment{
+    public static class PageFragment extends Fragment{
         public static Fragment newInstance(String title){
             Fragment fragment = new PageFragment();
             Bundle args = new Bundle();

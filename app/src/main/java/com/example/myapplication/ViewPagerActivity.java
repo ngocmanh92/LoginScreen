@@ -42,7 +42,7 @@ public class ViewPagerActivity extends ActionBarActivity {
         }
     }
 
-    private static class MyFragment extends Fragment{
+    public static class MyFragment extends Fragment{
 
         public static MyFragment getInstance(int page){
             MyFragment fragment = new MyFragment();

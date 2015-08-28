@@ -33,4 +33,6 @@
     <string name="title_activity_customized_view">CustomizedViewActivity</string>
     <string name="title_activity_notification">NotificationActivity</string>
     <string name="title_activity_notify_result">NotifyResultActivity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

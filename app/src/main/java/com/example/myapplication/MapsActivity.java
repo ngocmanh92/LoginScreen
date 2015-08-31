@@ -1,12 +1,22 @@
 package com.example.myapplication;
 
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.w3c.dom.Document;
+
+import app.akexorcist.gdaplibrary.GoogleDirection;
 
 public class MapsActivity extends FragmentActivity {
 
@@ -41,6 +51,25 @@ public class MapsActivity extends FragmentActivity {
      * method in {@link #onResume()} to guarantee that it will be called.
      */
     private void setUpMapIfNeeded() {
+        //Handle
+       /* if (mMap == null) {
+            GoogleMapOptions options = new GoogleMapOptions();
+//            options.mapType(GoogleMap.MAP_TYPE_TERRAIN);
+            options.compassEnabled(true);
+            options.zoomControlsEnabled(true);
+            options.zoomGesturesEnabled(true);
+            options.mapToolbarEnabled(true);
+            options.tiltGesturesEnabled(true);
+
+            SupportMapFragment fragment = SupportMapFragment.newInstance();
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.map_container, fragment)
+                    .commit();
+            mMap = fragment.getMap();
+        }
+        if (mMap != null)
+            setUpMap();*/
+        //Auto
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
@@ -59,7 +88,49 @@ public class MapsActivity extends FragmentActivity {
      * <p/>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
+    GoogleDirection direction;
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        final LatLng start = new LatLng(21.0277644, 105.8341598);
+        final LatLng end = new LatLng(21.03263639, 105.8389163);
+
+        final MarkerOptions marker = new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher))
+                .position(start).title("Marker")
+                .snippet("Description");
+
+
+        mMap.setOnMapLoadedCallback(new GoogleMap.OnMapLoadedCallback() {
+            @Override
+            public void onMapLoaded() {
+
+                mMap.addMarker(marker);
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(start, 15));
+                //buoc 1
+                mMap.setMyLocationEnabled(true);
+
+                UiSettings uiSettings = mMap.getUiSettings();
+                uiSettings.setCompassEnabled(true);
+                uiSettings.setZoomControlsEnabled(true);
+                uiSettings.setIndoorLevelPickerEnabled(true);
+                uiSettings.setAllGesturesEnabled(true);
+//        GoogleMapOptions options = new GoogleMapOptions();
+//        options.mapType(GoogleMap.)
+
+                //buoc 2
+                uiSettings.setMyLocationButtonEnabled(true);
+            }
+        });
+
+        direction = new GoogleDirection(this);
+        direction.setOnDirectionResponseListener(new GoogleDirection.OnDirectionResponseListener() {
+            @Override
+            public void onResponse(String status, Document doc, GoogleDirection gd) {
+                mMap.addPolyline(direction.getPolyline(doc,2, Color.BLUE));
+            }
+        });
+
+        direction.request(start,end,GoogleDirection.MODE_DRIVING);
+
     }
+
 }

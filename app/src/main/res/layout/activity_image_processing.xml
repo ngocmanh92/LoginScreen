@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.example.myapplication.ImageProcessingActivity">
+
+    <CheckBox
+        android:layout_marginTop="8dp"
+        android:id="@+id/checkbox_drawing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drawing" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/button_clear"
+        android:text="Clear" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button_clear"
+        android:id="@+id/button_blending"
+        android:text="Blend" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_blending_option"
+        android:layout_alignParentBottom="true"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_image_processing_container"
+        android:layout_below="@+id/button_clear"
+        android:layout_above="@+id/spinner_blending_option"
+        />
+
+</RelativeLayout>

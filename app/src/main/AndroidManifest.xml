@@ -160,12 +160,15 @@
         <activity
             android:name=".TakePhotoActivity"
             android:label="@string/title_activity_take_photo" >
-
         </activity>
         <activity
-            android:screenOrientation="landscape"
             android:name=".MyCameraActivity"
-            android:label="@string/title_activity_my_camera" >
+            android:label="@string/title_activity_my_camera"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ImageProcessingActivity"
+            android:label="@string/title_activity_image_processing" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -39,4 +39,5 @@
     <string name="title_activity_take_photo">TakePhotoActivity</string>
     <string name="title_activity_my_camera">MyCameraActivity</string>
     <string name="title_activity_image_processing">ImageProcessingActivity</string>
+    <string name="title_activity_animation">AnimationActivity</string>
 </resources>

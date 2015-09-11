@@ -12,12 +12,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Spinner;
 
 import com.example.myapplication.views.ImageProcessingView;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImageProcessingActivity extends ActionBarActivity implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
 
@@ -38,7 +43,54 @@ public class ImageProcessingActivity extends ActionBarActivity implements Compou
         ipView.setWillNotDraw(false);
         ViewGroup group = (ViewGroup) findViewById(R.id.layout_image_processing_container);
         group.addView(ipView);
+        initSpinner();
 
+    }
+
+    protected void initSpinner(){
+        Spinner spinnerEffect = (Spinner) findViewById(R.id.spinner_blending_option);
+        spinnerEffect.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                if(isDrawing) return;
+                ArrayAdapter<PorterDuff.Mode> adapter =
+                        (ArrayAdapter<PorterDuff.Mode>) adapterView.getAdapter();
+                PorterDuff.Mode mode = adapter.getItem(position);
+                try {
+                    blend(mode);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        List<PorterDuff.Mode> modes = new ArrayList<PorterDuff.Mode>();
+        modes.add(PorterDuff.Mode.ADD);
+        modes.add(PorterDuff.Mode.CLEAR);
+        modes.add(PorterDuff.Mode.DARKEN);
+        modes.add(PorterDuff.Mode.DST);
+        modes.add(PorterDuff.Mode.DST_ATOP);
+        modes.add(PorterDuff.Mode.DST_IN);
+        modes.add(PorterDuff.Mode.DST_OUT);
+        modes.add(PorterDuff.Mode.DST_OVER);
+        modes.add(PorterDuff.Mode.LIGHTEN);
+        modes.add(PorterDuff.Mode.MULTIPLY);
+        modes.add(PorterDuff.Mode.OVERLAY);
+        modes.add(PorterDuff.Mode.SCREEN);
+        modes.add(PorterDuff.Mode.DST_OUT);
+        modes.add(PorterDuff.Mode.DARKEN);
+
+        ArrayAdapter<PorterDuff.Mode> adapter =
+                new ArrayAdapter<PorterDuff.Mode>(
+                        this,
+                        android.R.layout.simple_spinner_dropdown_item,
+                        modes);
+        spinnerEffect.setAdapter(adapter);
     }
 
     @Override
@@ -64,10 +116,18 @@ public class ImageProcessingActivity extends ActionBarActivity implements Compou
         ipView.clean();
     }
 
-    public void blend() throws Exception {
+
+    public void blend()  {
+        try {
+            blend(PorterDuff.Mode.MULTIPLY);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void blend(PorterDuff.Mode mode) throws Exception {
         Bitmap src = BitmapFactory.decodeStream(getAssets().open("effect.jpg"));
         Bitmap dist = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-        Bitmap result = blending(src, dist, PorterDuff.Mode.MULTIPLY);
+        Bitmap result = blending(src, dist, mode);
         ipView.setBlendingBitmap(result);
         ipView.invalidate();
     }

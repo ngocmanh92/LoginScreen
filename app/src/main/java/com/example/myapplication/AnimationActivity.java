@@ -26,6 +26,8 @@ public class AnimationActivity extends ActionBarActivity implements View.OnClick
     }
 
     protected void animTesting(){
+        if(true) throw new NullPointerException("Loi null ");
+
         AnimatorSet set = new AnimatorSet();
         set.playTogether(
             ObjectAnimator.ofFloat(imageView, "alpha", 0,1).setDuration(2000),

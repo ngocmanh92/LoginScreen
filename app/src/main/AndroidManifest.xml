@@ -169,11 +169,15 @@
         <activity
             android:name=".ImageProcessingActivity"
             android:label="@string/title_activity_image_processing" >
-
         </activity>
         <activity
             android:name=".AnimationActivity"
             android:label="@string/title_activity_animation" >
+
+        </activity>
+        <activity
+            android:name=".MultiLanguageActivity"
+            android:label="@string/title_activity_multi_language" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

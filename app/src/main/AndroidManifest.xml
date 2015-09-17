@@ -173,11 +173,14 @@
         <activity
             android:name=".AnimationActivity"
             android:label="@string/title_activity_animation" >
-
         </activity>
         <activity
             android:name=".MultiLanguageActivity"
             android:label="@string/title_activity_multi_language" >
+        </activity>
+        <activity
+            android:name=".RecycleViewActivity"
+            android:label="@string/title_activity_recycle_view" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

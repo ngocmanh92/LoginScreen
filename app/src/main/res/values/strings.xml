@@ -41,4 +41,5 @@
     <string translatable="false" name="title_activity_image_processing">ImageProcessingActivity</string>
     <string translatable="false" name="title_activity_animation">AnimationActivity</string>
     <string translatable="false" name="title_activity_multi_language">MultiLanguageActivity</string>
+    <string translatable="false" name="title_activity_recycle_view">RecycleViewActivity</string>
 </resources>

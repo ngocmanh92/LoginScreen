@@ -40,6 +40,7 @@ public class AnimationActivity extends ActionBarActivity implements View.OnClick
 
         set.addListener(this);
         set.start();
+        
     }
 
 

@@ -173,11 +173,7 @@
         <activity
             android:name=".AnimationActivity"
             android:label="@string/title_activity_animation" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MultiLanguageActivity"
@@ -185,6 +181,11 @@
         </activity>
         <activity
             android:name=".RecycleViewActivity"
+            android:label="@string/title_activity_recycle_view" >
+
+        </activity>
+        <activity
+            android:name=".RecipeListViewActivity"
             android:label="@string/title_activity_recycle_view" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

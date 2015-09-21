@@ -45,6 +45,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.android.support:design:22.+'
     compile 'com.android.support:recyclerview-v7:22.+'
+    compile 'com.android.support:cardview-v7:22.+'
     compile 'com.google.android.gms:play-services:7.8.0'
     compile 'com.nineoldandroids:library:2.4.0'
     compile project(':library-mapv2-direction')

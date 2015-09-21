@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,7 +28,7 @@ public class RecycleViewActivity extends ActionBarActivity {
                 new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         GridLayoutManager gridLayoutManager =
-                new GridLayoutManager(this,2,GridLayoutManager.HORIZONTAL,false);
+                new GridLayoutManager(this,1,GridLayoutManager.VERTICAL,false);
 
         recyclerView.setLayoutManager(gridLayoutManager);
         
@@ -79,6 +80,7 @@ public class RecycleViewActivity extends ActionBarActivity {
                         null);
                 return new TextHolder(itemView);
             }
+
         }
 
         @Override
